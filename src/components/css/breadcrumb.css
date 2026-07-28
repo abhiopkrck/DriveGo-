@@ -1,0 +1,32 @@
+.breadcrumb{
+
+width:85%;
+margin:50px auto;
+
+background:#413c8f;
+
+color:white;
+
+text-align:center;
+
+padding:60px;
+
+border-radius:25px;
+
+}
+
+.breadcrumb h1{
+
+font-size:48px;
+
+margin-bottom:15px;
+
+}
+
+.breadcrumb p{
+
+font-size:18px;
+
+opacity:.9;
+
+}   

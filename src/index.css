@@ -1,111 +1,278 @@
-:root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+/* ========================= */
+/* GOOGLE FONT */
+/* ========================= */
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ========================= */
+/* RESET */
+/* ========================= */
 
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-  margin: 0;
+body{
+    font-family:"Poppins",sans-serif;
+    background:#ffffff;
+    color:#222;
+    overflow-x:hidden;
 }
 
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+img{
+    max-width:100%;
+    display:block;
 }
 
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
+ul{
+    list-style:none;
 }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
+button{
+    cursor:pointer;
+    font-family:inherit;
 }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+input,
+select,
+textarea,
+button{
+    font-family:inherit;
+}
+
+/* ========================= */
+/* CONTAINER */
+/* ========================= */
+
+.container{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+}
+
+/* ========================= */
+/* HEADINGS */
+/* ========================= */
+
+h1{
+    font-size:60px;
+}
+
+h2{
+    font-size:42px;
+}
+
+h3{
+    font-size:28px;
+}
+
+p{
+    line-height:1.7;
+}
+
+/* ========================= */
+/* SECTION */
+/* ========================= */
+
+section{
+    padding:80px 0;
+}
+
+/* ========================= */
+/* BUTTON */
+/* ========================= */
+
+.primary-btn{
+    background:#e53935;
+    color:white;
+    border:none;
+    padding:14px 30px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.primary-btn:hover{
+    background:#c62828;
+}
+
+/* ========================= */
+/* SCROLLBAR */
+/* ========================= */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#413c91;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+    background:#f3f3f3;
+}
+
+/* ========================= */
+/* LAPTOP */
+/* ========================= */
+
+@media(max-width:1200px){
+
+.container{
+    width:92%;
+}
+
+h1{
+    font-size:52px;
+}
+
+h2{
+    font-size:38px;
+}
+
+}
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media(max-width:992px){
+
+.container{
+    width:94%;
+}
+
+section{
+    padding:60px 0;
+}
+
+h1{
+    font-size:42px;
+}
+
+h2{
+    font-size:34px;
+}
+
+h3{
+    font-size:24px;
+}
+
+button{
+    font-size:15px;
+}
+
+input,
+select{
+    font-size:15px;
+}
+
+/* Common Grid */
+
+.grid-2{
+    grid-template-columns:1fr !important;
+}
+
+.grid-3{
+    grid-template-columns:1fr 1fr !important;
+}
+
+.grid-4{
+    grid-template-columns:1fr 1fr !important;
+}
+
+.flex{
+    flex-direction:column;
+}
+
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:768px){
+
+.container{
+    width:95%;
+}
+
+section{
+    padding:45px 0;
+}
+
+h1{
+    font-size:32px;
+}
+
+h2{
+    font-size:28px;
+}
+
+h3{
+    font-size:22px;
+}
+
+p{
+    font-size:15px;
+}
+
+button{
+    width:100%;
+}
+
+.grid-3,
+.grid-4{
+    grid-template-columns:1fr !important;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+}
+
+}
+
+/* ========================= */
+/* SMALL MOBILE */
+/* ========================= */
+
+@media(max-width:480px){
+
+.container{
+    width:94%;
+}
+
+h1{
+    font-size:26px;
+}
+
+h2{
+    font-size:24px;
+}
+
+h3{
+    font-size:18px;
+}
+
+p{
+    font-size:14px;
+}
+
+section{
+    padding:35px 0;
+}
+
 }
